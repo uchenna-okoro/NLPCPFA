@@ -32,4 +32,4 @@ Automation script for Dev → Test BI deployment
 ---
 
 ## Author
-Candidate Submission
+Kalu Uchenna Okoro
