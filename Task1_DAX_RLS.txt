@@ -1,0 +1,13 @@
+-- Dynamic Row Level Security Role Filter
+
+[EmployeeEmail] = USERPRINCIPALNAME()
+||
+[ParentPath] IN
+    PATH(
+        dim_employee[EmployeeKey],
+        LOOKUPVALUE(
+            dim_employee[EmployeeKey],
+            dim_employee[EmployeeEmail],
+            USERPRINCIPALNAME()
+        )
+    )
